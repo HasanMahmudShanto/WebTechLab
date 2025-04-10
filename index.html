@@ -4,50 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div>
-        <div style="display: flex; justify-content: center;">
-            <img src="Flag-Bangladesh.webp" style="height: 100px; width: 100px; border-radius: 50%;">
+        <div class="image-container">
+            <img src="Flag-Bangladesh.webp" class="flag-img">4
         </div>
-        <div style="display: flex; justify-content: center;">
+        <div class="center-text">
             <h1>This is title</h1>
         </div>
-        <div style="display: flex; justify-content: center;">
-            <div style="display: flex;">
+        <div class="center-form">
+            <div class="form-container">
                 <div>
-                    <div style="background-color:  aqua; height: 400px; width: 300px;">
-                        <form style="padding: 2%; display: flex; flex-direction: column;">
+                    <div class="form-bg">
+                        
+                        <form class="form">
                             <!--Heading-->
-                            <h2 style="padding-left: 75px;">Registration</h2>
- 
-               
+                            <h2 class="form-heading">Registration</h2>
+                            <div id="errorTxt">
+                            </div>
+                            
+
                             <!--Fullname-->
-                            <label for="Fullname" style="font-weight: bold;">Fullname: </label>
-                            <input type="text" placeholder="Enter Fullname" style="width: 150px; border-width: 0.5px;">
+                            <label for="Fullname" class="form-label">Fullname: </label>
+                            <input type="text" placeholder="Enter Fullname" class="form-input Fullname"
+                            id="fName">
  
                             <!--Email-->
-                            <label for="Email" style="font-weight: bold;">Email: </label>
-                            <input type="text" placeholder="Enter Email" style="width: 150px; border-width: 0.5px;">
+                            <label for="Email" class="form-label">Email: </label>
+                            <input type="text" placeholder="Enter Email" class="form-input">
  
-                           
                             <!--Password-->
-                            <label for="Password" style="font-weight: bold;">Password: </label>
-                            <input type="password" placeholder="Enter Password" style="width: 150px; border-width: 0.5px;">
+                            <label for="Password" class="form-label">Password: </label>
+                            <input type="password" placeholder="Enter Password" class="form-input">
                            
                             <!--Confirm Password-->
-                            <label for="Confirm Password" style="font-weight: bold;">Confirm Password: </label>
-                            <input type="Confirm Password" placeholder="Confirm Password" style="width: 150px; border-width: 0.5px;">
+                            <label for="Confirm Password" class="form-label">Confirm Password: </label>
+                            <input type="password" placeholder="Confirm Password" class="form-input">
  
-                           
                             <!--Gender-->
-                            <label for="Date of birth" style="font-weight: bold;">Date of birth: </label>
-                            <input type="date" style="width: 150px; border-width: 0.5px;">
+                            <label for="Date of birth" class="form-label">Date of birth: </label>
+                            <input type="date" class="form-input">
  
-                           
                             <!--Country select-->
-                            <label for="country" style="font-weight: bold;">Select your country</label>
-                            <select class="form-select" autocomplete="country" id="country" name="country" style="width: 150px;">
+                            <label for="country" class="form-label">Select your country</label>
+                            <select class="form-select" autocomplete="country" id="country" name="country">
+                                <option value="">country</option>
                                 <option value="">country</option>
                                 <option value="AF">Afghanistan</option>
                                 <option value="AX">Åland Islands</option>
@@ -302,32 +305,48 @@
                                 <option value="ZM">Zambia</option>
                                 <option value="ZW">Zimbabwe</option>
                             </select>
-                            <h4 style="margin-bottom: 5px; margin-top: 5px;">Choose your favourite language:</h4>
-                            <div style="display: flex; gap: 20px">
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <input type="radio" style="vertical-align: middle; margin-right: 5px;">
+
+                            <!--Gender-->
+                            <h4 class="gender-title">Choose your gender:</h4>
+                            <div class="gender-options">
+                                <div class="gender-option">
+                                    <input type="radio" id="male" name="gender">
                                     <label for="male">Male</label>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <input type="radio" style="vertical-align: middle; margin-right: 5px;">
+                                <div class="gender-option">
+                                    <input type="radio" id="female" name="gender">
                                     <label for="female">Female</label>
-                                </div>
-                                
+                                </div>            
                             </div>
-                            
+
+                            <!--Background color-->
+                            <label for="backColor" class="form-label">Background color:</label>
+                            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                            
+                            <!--Feedback-->
+                            <label for="feedback" class="form-label">Feedback: </label>
+                            <input type="text" placeholder="Enter feedback" class="form-input">
+                           
+                            <!--Terms and condition-->
+                            <label>
+                                <input type="checkbox">
+                                I have agree to the <a href="google.com">terms and the condition</a>
+                            </label>
+                            <!--Submit button-->
+                            <div class="submit-container">
+                                <button class="submit-button">Submit</button>
+                            </div>                          
                         </form>
-                    </div>
-                   
-                    <div style= "background-color: red; height: 200px; width:300px;"></div>
-       
+                    </div>                   
+                    <div class="bottom-banner"></div>
                 </div>
                 <div>
- 
-                    <div style="background-color: black; height: 600px; width:400px;"></div>
+                    <div class="side-banner"></div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src = "index.js" charset="UTF-8"></script>
 </body>
 </html>

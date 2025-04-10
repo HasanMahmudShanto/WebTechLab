@@ -1,0 +1,98 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flag-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+}
+
+.form-bg {
+    background-color: rgb(157, 223, 223);
+    height: 500px;
+    width: 300px;
+}
+
+.form {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-heading {
+    padding-left: 75px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    width: 150px;
+    border-width: 0.5px;
+}
+
+.form-select {
+    width: 150px;
+}
+
+.gender-title {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    height: 30px;
+    width: 100px;
+    font-size: medium;
+}
+
+.bottom-banner {
+    background-color: red;
+    height: 100px;
+    width: 300px;
+}
+
+.side-banner {
+    background-color: black;
+    height: 600px;
+    width: 400px;
+}
+
+
+
+.errorAnimation {
+    border: 5px solid red;
+}
