@@ -25,7 +25,8 @@
 
 .form-bg {
     background-color: rgb(157, 223, 223);
-    height: 500px;
+    z-index: 1;
+    height: auto;
     width: 300px;
 }
 
@@ -92,7 +93,8 @@
 }
 
 
-
-.errorAnimation {
-    border: 5px solid red;
+#errorTxt {
+    color: red;
+    margin-bottom: 10px;
+    display: none; /* hidden by default */
 }

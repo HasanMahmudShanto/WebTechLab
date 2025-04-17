@@ -1,15 +1,24 @@
-
-document.querySelector("button").addEventListener("click", function(event){
+document.querySelector("button").addEventListener("click", function(event) {
     event.preventDefault();
-    let fullName = document.getElementById("fName").value;
+    let fullName = document.getElementById("fName");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let confirmPass = document.getElementById("confirmPass");
+    let dob = document.getElementById("dob");
+    let country = document.getElementById("country");
+    /*let gender = document.getElementById("gender");*/
+    let backgroundColor = document.getElementById("favcolor");
+    let feedback = document.getElementById("feedback");
+    let terms = document.getElementById("terms");
     let isValid = /^[a-zA-Z.\- ]+$/;
-    if(isValid.test(fullName)){
+    const errorEl = document.getElementById("errorTxt");
+
+    if (isValid.test(fullName.value)) {
         alert("Valid");
-    }else{
-
-        document.getElementById("errorTxt").innerHTML = "Invalid";
-
-        
-        return false;
+        errorEl.style.display = "none";
+        errorEl.innerHTML = "";
+    } else {
+        errorEl.innerHTML = "Invalid";
+        errorEl.style.display = "block";
     }
 });

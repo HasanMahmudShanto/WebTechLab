@@ -22,9 +22,9 @@
                         <form class="form">
                             <!--Heading-->
                             <h2 class="form-heading">Registration</h2>
-                            <div id="errorTxt">
-                            </div>
                             
+                            
+                            <div id="errorTxt"></div>    
 
                             <!--Fullname-->
                             <label for="Fullname" class="form-label">Fullname: </label>
@@ -33,23 +33,28 @@
  
                             <!--Email-->
                             <label for="Email" class="form-label">Email: </label>
-                            <input type="text" placeholder="Enter Email" class="form-input">
+                            <input type="text" placeholder="Enter Email" class="form-input"
+                            id = "email">
  
                             <!--Password-->
                             <label for="Password" class="form-label">Password: </label>
-                            <input type="password" placeholder="Enter Password" class="form-input">
+                            <input type="password" placeholder="Enter Password" class="form-input"
+                            id = "password">
                            
                             <!--Confirm Password-->
                             <label for="Confirm Password" class="form-label">Confirm Password: </label>
-                            <input type="password" placeholder="Confirm Password" class="form-input">
+                            <input type="password" placeholder="Confirm Password" class="form-input"
+                            id = "confirmPass">
  
                             <!--Gender-->
                             <label for="Date of birth" class="form-label">Date of birth: </label>
-                            <input type="date" class="form-input">
+                            <input type="date" class="form-input"
+                            id="dob">
  
                             <!--Country select-->
                             <label for="country" class="form-label">Select your country</label>
                             <select class="form-select" autocomplete="country" id="country" name="country">
+
                                 <option value="">country</option>
                                 <option value="">country</option>
                                 <option value="AF">Afghanistan</option>
@@ -304,6 +309,7 @@
                                 <option value="YE">Yemen</option>
                                 <option value="ZM">Zambia</option>
                                 <option value="ZW">Zimbabwe</option>
+                                
                             </select>
 
                             <!--Gender-->
@@ -325,11 +331,13 @@
                            
                             <!--Feedback-->
                             <label for="feedback" class="form-label">Feedback: </label>
-                            <input type="text" placeholder="Enter feedback" class="form-input">
+                            <input type="text" placeholder="Enter feedback" class="form-input"
+                            id = "feedback">
                            
                             <!--Terms and condition-->
                             <label>
-                                <input type="checkbox">
+                                <input type="checkbox"
+                                id="terms">
                                 I have agree to the <a href="google.com">terms and the condition</a>
                             </label>
                             <!--Submit button-->
