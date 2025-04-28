@@ -10,15 +10,11 @@ document.querySelector("button").addEventListener("click", function(event) {
     let feedback = document.getElementById("feedback");
     let terms = document.getElementById("terms");
     
-    checkFullName(fullName.value);
-    checkEmail(email.value);
-    checkPassword(password.value);
-    checkConfirmPassword(confirmPass.value, password.value);
-    checkDOB(new Date(dob.value));
-    checkCountry(country.value);
-    checkGender();
-    checkFeedback(feedback.value);
-    checkTerms(terms.value);
+   if(checkFullName(fullName.value) && checkEmail(email.value) && checkPassword(password.value) && 
+    checkConfirmPassword(confirmPass.value, password.value) && checkDOB(new Date(dob.value)) &&
+    checkCountry(country.value) && checkGender() && checkFeedback(feedback.value) && checkTerms(terms.value)){
+        alert("all okay");
+    }
 });
 
 function checkFullName(fullName){
@@ -31,9 +27,11 @@ function checkFullName(fullName){
         //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
+        return true;
     } else {
         errorEl.innerHTML = "Invalid Fullname";
         errorEl.style.display = "block";
+        return false;
     }
 }
 
@@ -46,25 +44,29 @@ function checkEmail(email){
         //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
+        return true;
     } else {
         errorEl.innerHTML = "Invalid Email";
         errorEl.style.display = "block";
+        return false;
     }
 }
 
 function checkPassword(password){
 
-    let isValid = /^[a-zA-Z.\- ]+$/;
+    let isValid = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
     const errorEl = document.getElementById("errorTxt");
 
     
-    if (!(isValid.test(password))) {
+    if (isValid.test(password)) {
         //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
+        return true;
     } else {
         errorEl.innerHTML = "Invalid Password";
         errorEl.style.display = "block";
+        return false
     }
 }
 
@@ -75,9 +77,11 @@ function checkConfirmPassword(confirmPass, password){
         //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
+        return true;
     } else {
         errorEl.innerHTML = "Confirm password doesn't match";
         errorEl.style.display = "block";
+        return false;
     }
 
 }
@@ -96,10 +100,12 @@ function checkDOB(dob){
     if(age < 18){
         errorEl.innerHTML = "You must be 18 years old";
         errorEl.style.display = "block";
+        return false;
     } else {
         //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
+        return true;
     }
 }
 
@@ -110,7 +116,9 @@ function checkGender() {
     if (!male.checked && !female.checked) {
         errorEl.innerHTML = "Please select a gender";
         errorEl.style.display = "block";
+        return false;
     }
+    return true;
 }
 
 function checkCountry(countryValue) {
@@ -118,7 +126,9 @@ function checkCountry(countryValue) {
     if (!countryValue) { 
         errorEl.innerHTML = "Please select a country";
         errorEl.style.display = "block";
+        return false;
     }
+    return true;
 }
 
 function checkTerms(isChecked) {
@@ -126,7 +136,9 @@ function checkTerms(isChecked) {
     if (!isChecked) {
         errorEl.innerHTML = "You must agree to the terms and conditions";
         errorEl.style.display = "block";
+        return false;
     }
+    return true;
 }
 
 function checkFeedback(feedback) {
@@ -134,5 +146,7 @@ function checkFeedback(feedback) {
     if (feedback.trim().length === 0) {
         errorEl.innerHTML = "Feedback cannot be empty";
         errorEl.style.display = "block";
+        return false;
     }
+    return true;
 }
