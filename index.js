@@ -97,7 +97,7 @@ function checkDOB(dob){
         errorEl.innerHTML = "You must be 18 years old";
         errorEl.style.display = "block";
     } else {
-        alert("Valid");
+        //alert("Valid");
         errorEl.style.display = "none";
         errorEl.innerHTML = "";
     }
