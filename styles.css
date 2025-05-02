@@ -20,13 +20,14 @@
 }
 
 .form-container {
-    display: flex;
+    display: inline-flex;
+    height: auto;
 }
 
 .form-bg {
     background-color: rgb(157, 223, 223);
     z-index: 1;
-    height: auto;
+    height: fit-content;
     width: 300px;
 }
 
@@ -34,6 +35,12 @@
     padding: 2%;
     display: flex;
     flex-direction: column;
+}
+
+.form-1-2{
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .form-heading {
@@ -81,7 +88,7 @@
 }
 
 .bottom-banner {
-    background-color: red;
+    background-color: hotpink;
     height: 100px;
     width: 300px;
 }

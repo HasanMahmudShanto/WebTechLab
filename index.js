@@ -1,3 +1,5 @@
+document.querySelector()
+
 document.querySelector("button").addEventListener("click", function(event) {
     event.preventDefault();
     let fullName = document.getElementById("fName");
