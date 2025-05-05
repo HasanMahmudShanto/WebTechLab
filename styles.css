@@ -20,15 +20,22 @@
 }
 
 .form-container {
-    display: inline-flex;
-    height: auto;
+    display: flex;
+    align-items: stretch; 
 }
-
 .form-bg {
     background-color: rgb(157, 223, 223);
     z-index: 1;
-    height: fit-content;
+    height: auto;
     width: 300px;
+}
+
+label{
+    font-size: large;
+}
+input{
+    height: 20px;
+
 }
 
 .form {
@@ -37,12 +44,16 @@
     flex-direction: column;
 }
 
-.form-1-2{
-    display: flex;
-    flex-direction: column;
-    
+.registration-box{
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
+.form-1-2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Takes available space */
+}
 .form-heading {
     padding-left: 75px;
 }
@@ -89,16 +100,46 @@
 
 .bottom-banner {
     background-color: hotpink;
-    height: 100px;
     width: 300px;
+    flex-grow: 1; /* Expands with content */
+}
+
+.info-box{
+    padding: 10px;
+    text-align: center;
+}
+
+.info-table{
+    outline: 10;
+    display: flex;
+    justify-content: center;
+}
+table, th, td{
+    border: 3px solid;
+    border-collapse: collapse;
+    width: 1000px;
+    font-size: large;
 }
 
 .side-banner {
-    background-color: black;
-    height: 600px;
+    background-color: salmon;
+    height: 100%; 
     width: 400px;
 }
 
+.login-heading{
+    text-align: center;
+}
+
+.login-form{
+    padding: 5px;
+    font-weight: bold;
+}
+
+.login-box{
+    padding: 10px;
+    padding-bottom: 30px;
+}
 
 #errorTxt {
     color: red;
