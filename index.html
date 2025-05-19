@@ -20,38 +20,32 @@
                     <div class="form-bg">
                         <div class="registration-box">
                             <form action= "process.php" class="form" method="get">
-                                <!--Heading-->
+                                
                                 <h2 class="form-heading">Registration</h2>
                                 
                                 
                                 <div id="errorTxt"></div>    
 
-                                <!--Fullname-->
                                 <label for="Fullname" class="form-label">Fullname: </label>
                                 <input type="text" name = "fullname" placeholder="Enter Fullname" class="form-input Fullname"
                                 id="fName">
     
-                                <!--Email-->
                                 <label for="Email" class="form-label">Email: </label>
                                 <input type="text" name = "email" placeholder="Enter Email" class="form-input"
                                 id = "email">
     
-                                <!--Password-->
                                 <label for="Password" class="form-label">Password: </label>
                                 <input type="password" name = "password" placeholder="Enter Password" class="form-input"
                                 id = "password">
                             
-                                <!--Confirm Password-->
                                 <label for="Confirm Password" class="form-label">Confirm Password: </label>
                                 <input type= "password" placeholder="Confirm Password" class="form-input"
                                 id = "confirmPass">
     
-                                <!--Gender-->
                                 <label for="Date of birth" class="form-label">Date of birth: </label>
                                 <input type="date" name = "date" class="form-input"
                                 id="dob">
     
-                                <!--Country select-->
                                 <label for="country" class="form-label">Select your country</label>
                                 <select class="form-select" autocomplete="country" id="country" name="country">
                                     <option value="AF">Afghanistan</option>
@@ -311,7 +305,6 @@
                                         
                                 </select>
 
-                                <!--Gender-->
                                 <h4 class="gender-title">Choose your gender:</h4>
                                 <div class="gender-options">
                                     <div class="gender-option">
@@ -324,22 +317,20 @@
                                     </div>            
                                 </div>
 
-                                <!--Background color-->
                                 <label for="backColor" class="form-label">Background color:</label>
                                 <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                             
-                                <!--Feedback-->
                                 <label for="feedback" class="form-label">Feedback: </label>
                                 <input type="text" name = "feedback" placeholder="Enter feedback" class="form-input"
                                 id = "feedback">
                             
-                                <!--Terms and condition-->
                                 <label>
                                     <input type="checkbox"
                                     id="terms">
                                     I have agree to the <a href="google.com">terms and the condition</a>
                                 </label>
-                                <!--Submit button-->
+                                
+                                
                                 <div class="submit-container">
                                     <button class="submit-button">Submit</button>
                                 </div>                          
